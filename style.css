@@ -1,0 +1,277 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px;
+    display: grid;
+    place-items: center;
+    background: #edf3ef;
+    color: #17231d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.portal {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    width: min(1050px, 100%);
+    min-height: 650px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(17, 47, 34, 0.16);
+}
+
+.school-panel {
+    position: relative;
+    min-height: 650px;
+    overflow: hidden;
+    background: #064e3b;
+}
+
+.school-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.school-panel::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(4, 45, 33, 0.02) 25%, rgba(4, 45, 33, 0.88) 100%);
+    content: "";
+}
+
+.school-caption {
+    position: absolute;
+    z-index: 1;
+    right: 42px;
+    bottom: 42px;
+    left: 42px;
+    color: #fff;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #0b7655;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.school-caption .eyebrow {
+    color: #e8c85b;
+}
+
+.school-caption h1 {
+    margin: 0 0 12px;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.1;
+}
+
+.school-caption > p:last-child {
+    max-width: 360px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.login-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 54px clamp(32px, 6vw, 70px) 25px;
+}
+
+.login-content {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+
+.school-mark {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 24px;
+    place-items: center;
+    border: 2px solid #d5b746;
+    border-radius: 50%;
+    background: #064e3b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.school-address {
+    margin: 0 0 48px;
+    color: #64736a;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+}
+
+.login-content h2 {
+    margin: 0 0 8px;
+    color: #153d2d;
+    font-size: 29px;
+}
+
+.login-description {
+    margin: 0 0 30px;
+    color: #69766f;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #263a30;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.input-group input {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 14px;
+    border: 1px solid #d9e1dc;
+    border-radius: 8px;
+    outline: none;
+    background: #fbfcfb;
+    color: #17231d;
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.input-group input:focus {
+    border-color: #0b7655;
+    box-shadow: 0 0 0 3px rgba(11, 118, 85, 0.13);
+}
+
+.login-error {
+    min-height: 18px;
+    margin: 0 0 10px;
+    color: #b42318;
+    font-size: 13px;
+}
+
+.login-error:empty {
+    min-height: 0;
+}
+
+button {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    border: 0;
+    border-radius: 8px;
+    background: #08734f;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: #064e3b;
+}
+
+button:focus-visible {
+    outline: 3px solid #d5b746;
+    outline-offset: 3px;
+}
+
+button span {
+    font-size: 20px;
+}
+
+.login-help {
+    margin: 24px 0 0;
+    color: #69766f;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.page-footer {
+    margin-top: 40px;
+    color: #829087;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    body {
+        padding: 16px;
+    }
+
+    .portal {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .school-panel {
+        min-height: 300px;
+    }
+
+    .school-caption {
+        right: 25px;
+        bottom: 24px;
+        left: 25px;
+    }
+
+    .school-caption h1 {
+        font-size: 30px;
+    }
+
+    .school-caption > p:last-child {
+        font-size: 13px;
+    }
+
+    .login-panel {
+        min-height: 480px;
+        padding: 38px 28px 20px;
+    }
+
+    .school-address {
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 10px;
+    }
+
+    .portal {
+        border-radius: 14px;
+    }
+
+    .school-panel {
+        min-height: 260px;
+    }
+
+    .login-panel {
+        padding-right: 22px;
+        padding-left: 22px;
+    }
+}

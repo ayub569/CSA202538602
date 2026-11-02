@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#064e3b">
+    <title>Student Portal | Umar International High School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="portal">
+        <section class="school-panel" aria-label="Umar International High School">
+            <img class="school-image" src="school-login.png" alt="Umar International High School campus">
+            <div class="school-caption">
+                <p class="eyebrow">LEARN · GROW · EXCEL</p>
+                <h1>Welcome to your<br>school portal</h1>
+                <p>Access your learning tools and student resources in one place.</p>
+            </div>
+        </section>
+
+        <section class="login-panel">
+            <div class="login-content">
+                <p class="eyebrow"></p>
+                <p class="school-address"></p>
+
+                <h2>Student login</h2>
+                <p class="login-description">Enter your username and password to continue.</p>
+
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            autocomplete="username"
+                            placeholder="Enter your username"
+                            required
+                        >
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter any password"
+                            required
+                        >
+                    </div>
+                    <p class="login-error" id="login-error" role="alert" aria-live="polite"></p>
+                    <button type="submit">Sign in <span aria-hidden="true">→</span></button>
+                </form>
+
+                <p class="login-help">Need help signing in? Please contact the school office.</p>
+            </div>
+            <footer class="page-footer">&copy; 2026 Umar International High School</footer>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

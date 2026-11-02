@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#064e3b">
+    <title>Student Portal | Umar International High School</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="portal-layout">
+        <aside class="sidebar" aria-label="Student portal sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-mark" aria-hidden="true">UI</span>
+                <span class="brand-name">Umar International<small>High School</small></span>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Main navigation">
+                <button class="nav-link active" type="button" data-view="home" aria-current="page">
+                    <span class="nav-icon" aria-hidden="true">⌂</span>
+                    <span>Home</span>
+                </button>
+                <button class="nav-link" type="button" data-view="calculator">
+                    <span class="nav-icon" aria-hidden="true">＋</span>
+                    <span>Calculator</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <button class="profile-trigger" type="button" data-view="profile" aria-label="Open student profile">
+                    <img src="IMG_20260327_100912_475.jpg" alt="">
+                    <span class="profile-details">
+                        <span class="profile-name" id="sidebar-name">Student</span>
+                        <span class="profile-caption">Student account</span>
+                    </span>
+                </button>
+                <button class="logout" type="button" id="logout-button">Log out</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="view dashboard-view" id="home-view" aria-labelledby="home-heading">
+                <header class="page-heading">
+                    <p>STUDENT DASHBOARD</p>
+                    <h1 id="home-heading">Welcome, <span id="dashboard-name">Student</span></h1>
+                    <p class="heading-description">Your learning tools and student information in one place.</p>
+                </header>
+
+                <section class="student-card" aria-labelledby="student-info-heading">
+                    <div class="student-card-mark" aria-hidden="true">UI</div>
+                    <div>
+                        <p class="card-eyebrow">STUDENT INFORMATION</p>
+                        <h2 id="student-info-heading"><span id="student-name">Student</span></h2>
+                        <p class="student-school">Umar International High School</p>
+                    </div>
+                    <div class="student-matric">
+                        <span>Matric number</span>
+                        <strong>CSA/2025/38602</strong>
+                    </div>
+                </section>
+
+                <h2 class="section-title">Learning tools</h2>
+                <button class="tool-card" type="button" data-view="calculator">
+                    <span class="tool-icon" aria-hidden="true">＋</span>
+                    <span class="tool-copy">
+                        <strong>Calculator</strong>
+                        <span>Open your student calculator</span>
+                    </span>
+                    <span class="tool-arrow" aria-hidden="true">→</span>
+                </button>
+            </section>
+
+            <section class="view calculator-view" id="calculator-view" aria-labelledby="calculator-heading" hidden>
+                <header class="page-heading">
+                    <p>LEARNING TOOLS</p>
+                    <h1 id="calculator-heading">Student Calculator</h1>
+                </header>
+
+                <section class="calculator-container" aria-label="Student calculator">
+                    <header class="calculator-header">
+                        <p class="matric">CSA/2025/38602</p>
+                    </header>
+                    <section class="calculator" aria-label="Calculator">
+                        <p class="welcome-message" id="welcome-message">Student Calculator</p>
+                        <output id="display" aria-label="Calculator display" aria-live="polite">0</output>
+                        <div class="buttons">
+                            <button class="clear" type="button" data-action="clear">AC</button>
+                            <button class="operator" type="button" data-action="delete" aria-label="Delete last digit">DEL</button>
+                            <button class="operator" type="button" data-operator="/">÷</button>
+                            <button class="operator" type="button" data-operator="*">×</button>
+
+                            <button type="button" data-number="7">7</button>
+                            <button type="button" data-number="8">8</button>
+                            <button type="button" data-number="9">9</button>
+                            <button class="operator" type="button" data-operator="-">−</button>
+
+                            <button type="button" data-number="4">4</button>
+                            <button type="button" data-number="5">5</button>
+                            <button type="button" data-number="6">6</button>
+                            <button class="operator" type="button" data-operator="+">+</button>
+
+                            <button type="button" data-number="1">1</button>
+                            <button type="button" data-number="2">2</button>
+                            <button type="button" data-number="3">3</button>
+                            <button class="equal" type="button" data-action="equals">=</button>
+
+                            <button class="zero" type="button" data-number="0">0</button>
+                            <button type="button" data-action="decimal">.</button>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section class="view profile-view" id="profile-view" aria-labelledby="profile-heading" hidden>
+                <header class="page-heading">
+                    <p>STUDENT PROFILE</p>
+                    <h1 id="profile-heading">Your profile</h1>
+                </header>
+                <section class="profile-card">
+                    <img class="profile-large" src="IMG_20260327_100912_475.jpg" alt="Your profile picture">
+                    <div class="profile-info">
+                        <p class="card-eyebrow">STUDENT INFORMATION</p>
+                        <h2 id="profile-full-name">Student</h2>
+                        <dl>
+                            <div>
+                                <dt>Matric number</dt>
+                                <dd>CSA/2025/38602</dd>
+                            </div>
+                            <div>
+                                <dt>School</dt>
+                                <dd>Umar International High School</dd>
+                            </div>
+                            <div>
+                                <dt>Account</dt>
+                                <dd>Student</dd>
+                            </div>
+                        </dl>
+                        <button class="back-home" type="button" data-view="home">Back to Home</button>
+                    </div>
+                </section>
+            </section>
+
+            <footer class="footer">&copy; 2026 Umar International High School</footer>
+        </main>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
