@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#064e3b">
+    <title>Student Portal | Umar International High School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="portal">
+        <section class="school-panel" aria-label="Umar International High School">
+            <img class="school-image" src="school-login.png" alt="Umar International High School campus">
+            <div class="school-caption">
+                <p class="eyebrow">LEARN · GROW · EXCEL</p>
+                <h1>Welcome to your<br>school portal</h1>
+                <p>Access your learning tools and student resources in one place.</p>
+            </div>
+        </section>
+
+        <section class="login-panel">
+            <div class="login-content">
+                <div class="school-mark" aria-hidden="true">UI</div>
+                <p class="eyebrow">UMAR INTERNATIONAL HIGH SCHOOL</p>
+                <p class="school-address">LEARN · GROW · EXCEL</p>
+
+                <h2>Portal sign in</h2>
+                <p class="login-description">Sign in with your school account to continue.</p>
+
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Username or phone number</label>
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            autocomplete="username"
+                            placeholder="Enter your username or school account email"
+                            required
+                        >
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+                    <p class="login-error" id="login-error" role="alert" aria-live="polite"></p>
+                    <button type="submit">Sign in <span aria-hidden="true">→</span></button>
+                </form>
+
+                <p class="login-help" id="login-help">Sign in with the username and password issued by your school administrator. For account assistance, contact the school office.</p>
+                <section id="activation-panel" class="activation-panel" hidden aria-labelledby="activation-heading">
+                    <p class="card-eyebrow">FIRST SIGN IN</p>
+                    <h2 id="activation-heading">Activate your account</h2>
+                    <p class="login-description">Your temporary password must be replaced before you can continue.</p>
+                    <form id="activation-form">
+                        <div class="input-group">
+                            <label for="new-password">New password</label>
+                            <input id="new-password" name="new-password" type="password" minlength="12" autocomplete="new-password" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="confirm-password">Confirm new password</label>
+                            <input id="confirm-password" name="confirm-password" type="password" minlength="12" autocomplete="new-password" required>
+                        </div>
+                        <p class="login-error" id="activation-error" role="alert" aria-live="polite"></p>
+                        <button type="submit">Set password and continue</button>
+                    </form>
+                </section>
+            </div>
+            <footer class="page-footer">&copy; 2026 Umar International High School</footer>
+        </section>
+    </main>
+    <script src="supabase-config.js"></script>
+    <script src="portal-auth.js"></script>
+
+    <script src="login.js?v=20261119b"></script>
+</body>
+</html>

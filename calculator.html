@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#064e3b">
+    <title>School Portal | Umar International High School</title>
+    <link rel="stylesheet" href="calculator.css?v=20261119b">
+</head>
+<body>
+    <div class="portal-layout">
+        <aside class="sidebar" aria-label="Portal sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-mark" aria-hidden="true">UI</span>
+                <span class="brand-name">Umar International<small>High School</small></span>
+            </div>
+            <nav class="sidebar-nav" id="sidebar-nav" aria-label="Main navigation"></nav>
+            <div class="sidebar-bottom">
+                <div class="profile profile-trigger">
+                    <span id="sidebar-avatar" class="profile-avatar" aria-hidden="true">U</span>
+                    <span class="profile-details">
+                        <span class="profile-name" id="sidebar-name">User</span>
+                        <span class="profile-caption" id="sidebar-role">Account</span>
+                    </span>
+                </div>
+                <button class="logout" type="button" id="logout-button">Log out</button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div id="portal-content" class="view"></div>
+            <p class="toast" id="toast" role="status" aria-live="polite"></p>
+            <footer class="footer">&copy; 2026 Umar International High School</footer>
+        </main>
+    </div>
+    <dialog class="credential-dialog" id="credential-dialog" aria-labelledby="credential-heading">
+        <p class="card-eyebrow">ONE-TIME ACCOUNT DETAILS</p>
+        <h2 id="credential-heading">Temporary login credentials</h2>
+        <p>Copy these details and deliver them securely to the account holder. The temporary password is not saved or shown again.</p>
+        <dl>
+            <div><dt>Username</dt><dd id="credential-username"></dd></div>
+            <div><dt>Temporary password</dt><dd id="credential-password"></dd></div>
+            <div><dt>Expires</dt><dd id="credential-expiry"></dd></div>
+        </dl>
+        <div class="credential-actions">
+            <button type="button" class="secondary-button" id="copy-credentials">Copy details</button>
+            <button type="button" class="primary-button" id="close-credentials">Done</button>
+        </div>
+    </dialog>
+    <script src="supabase-config.js"></script>
+    <script src="portal-auth.js"></script>
+    <script src="calculator.js?v=20261119b"></script>
+</body>
+</html>
